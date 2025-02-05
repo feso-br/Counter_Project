@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Counter : <span id="Counter"> 0 </span> </h1>
+    
+    <button onclick="plus()"> + </button>
+    <button onclick="minus()"> - </button>
+
+    <button onclick="reset()"> Reset </button>
+
+    <script src="test3.Js" > </script>
+
+</body>
+
+<script>
+
+let Counter = 0
+
+// Update 
+
+function updateCounter() {
+
+    document.getElementById("Counter").innerHTML = Counter
+    
+}
+
+//Plus
+
+function plus() {
+
+    Counter++
+    updateCounter()
+
+}
+
+// Minus
+
+function minus() {
+
+    if (Counter > 0){
+
+        Counter--
+        updateCounter()        
+
+    }
+    else{
+
+        alert(" The Lowest Value you Can Reach is 0")
+
+    }
+
+}
+
+    // Another Code - Minus
+
+function minus() {
+
+    if (Counter === 0){
+
+        alert(" The Lowest Value you Can Reach is 0")
+        return false;     
+
+    }
+
+    Counter--
+    updateCounter()
+
+}
+
+// Reset
+
+function reset() {
+
+    Counter = 0 
+    updateCounter()
+
+}
+
+</script>
+</html>
